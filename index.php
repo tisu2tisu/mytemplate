@@ -76,7 +76,8 @@
 
 				#contentContainer
 					{
-						margin: 0;
+						margin-right: 10px;
+						margin-left: 10px;
 						padding: 0;
 					}
 
@@ -141,9 +142,123 @@
 					{
 						background-color: #f7f7f7;
 					}
+
+				#rsideL
+					{
+						top: 150px;
+						width: 240px;
+						position: absolute;
+						padding-right: 0px;
+						padding-left: 0px;
+						padding-top: 10px;
+						right: 1px;
+						box-shadow: 5px 5px 5px #999999;
+						margin-top: 0px;
+						padding-bottom: 10px;
+						margin-right: 5px;
+						background-color: #eeeeee;
+					}
+
+				#rsideL legend
+					{
+						background-color: #666;
+						padding: 10px 0px 10px 0px;
+						text-align: center;
+						margin: 0;
+						width: 100%;
+						color: #ffffff;
+					}
+
+				#rsideL a
+					{
+						text-decoration: none;
+						color: #000000;
+					}
+
+				#rsideL a:hover
+					{
+						font-weight: bold;
+					}
+
+				#rsideL p
+					{
+						padding: 10px;
+					}
+
+				#rsideJ
+					{
+						top: 470px;
+						width: 240px;
+						position: absolute;
+						padding-right: 0px;
+						padding-left: 0px;
+						padding-top: 10px;
+						right: 1px;
+						box-shadow: 5px 5px 5px #999999;
+						margin-top: 0px;
+						padding-bottom: 10px;
+						margin-right: 5px;
+						background-color: #eeeeee;
+					}
+
+				#rsideJ legend
+					{
+						background-color: #666;
+						padding: 10px 0px 10px 0px;
+						text-align: center;
+						margin: 0;
+						width: 100%;
+						color: #ffffff;
+					}
+
+				#rsideJ p
+					{
+						margin-left: 50px;
+						margin-bottom: 0;
+					}
+
+				#rsideP
+					{
+						top: 690px;
+						width: 240px;
+						position: absolute;
+						padding-right: 0px;
+						padding-left: 0px;
+						padding-top: 10px;
+						right: 1px;
+						box-shadow: 5px 5px 5px #999999;
+						margin-top: 0px;
+						padding-bottom: 10px;
+						margin-right: 5px;
+						background-color: #eeeeee;
+					}
+
+				#rsideP legend
+					{
+						background-color: #666;
+						padding: 10px 0px 10px 0px;
+						text-align: center;
+						margin: 0;
+						width: 100%;
+						color: #ffffff;
+					}
+
+				#rsideP h3
+					{
+						text-align: center;
+					}
+
+				#rsideP p 
+					{
+						text-align: center;
+					}
 			</style>
 		</head>
 		<body>
+			<?php
+				include_once("analyticstracking.php");
+			?>
+
 			<div id="container">
 
 				<div id="header">
@@ -176,8 +291,66 @@
 						</p>
 						<a href="#"> Read More </a>
 			 		</div>
-				</div>
 
+					<div id="rsideL">
+						<legend> List Postingan </legend>
+							<p>
+
+							<?php
+								$folder = "php/"; // sesuaikan foldernya
+								if(!($buka_folder = opendir($folder))) die ("error tidak bisa membuka folder");
+
+								$file_array = array();
+									while($baca_folder = readdir($buka_folder))
+										{
+											if(substr($baca_folder,0,1) != '.')
+												{
+													$file_array[] = $baca_folder;
+												}
+										}
+
+									while(list($index, $nama_file) = each($file_array))
+										{
+											$nomor = $index+1;
+											echo "$nomor. <a href='$nama_file'>$nama_file</a> <br /> <br />";
+
+										}
+									closedir($buka_folder)
+							?>
+						</p>
+					</div>
+					<div id="rsideJ">
+						<legend> Waktu Sekarang </legend>
+							<p>
+								<embed src="http://www.clocktag.com/cs/dt151.swf"  width="143" height="110"  wmode="transparent" type="application/x-shockwave-flash"></embed>
+							</p>
+					</div>
+
+					<div id="rsideP">
+						<legend> Web Visitors </legend>
+							<h3> Total pengunjung </h3>
+							<p>
+							<?php
+								//Easy Counter code begins
+
+									$ec_username = 'vendor'; // <--- your username
+
+									if (!$ec_fsock = fsockopen('www.easycounter.com', 80, $errno, $errstr, 2)) {
+  										echo '<img src="http://www.easycounter.com/images/error.png">';
+											} else {
+  														fputs($ec_fsock, "GET /php.counter.php?username=".urlencode($ec_username)." HTTP/1.0\r\n".
+  														"Host:www.easycounter.com\r\n\r\n");
+  														$ec_buffer = '';
+  															while (!feof($ec_fsock)) $ec_buffer .= fgets($ec_fsock, 1024);
+															  echo substr($ec_buffer, strpos($ec_buffer, "\n\r\n")+3);
+															  fclose($ec_fsock);
+													}
+
+								//Easy Counter code ends
+							?>
+						</p>
+					</div>
+				</div>
 			</div>
 		</body>
 	</html> 
