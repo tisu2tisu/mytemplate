@@ -3,7 +3,6 @@
 		<head>
 			<title> tisubasah | learn from basic and become expert.</title>
 				<link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
-				<link href='favicon.ico' rel='shorcut icon'>
 				<style type="text/css">
 				
 				body
@@ -83,15 +82,10 @@
 						padding: 0;
 					}
 
-				#kolomContainer
+				#contentContainer h2
 					{
-						font-size: 12px;
-					}
-
-				#kolomtanggal
-					{
-						text-align: right;
-						font-size: 12px;
+						margin-top: 40px;
+						margin-left: 20px;
 					}
 
 				#content
@@ -278,7 +272,7 @@
 						background-color: black;
 						color: #ffffff;
 						width: 100%;
-						margin-top: 400px;
+						margin-top: 700px;
 						padding: 20px;
 						height: 200px;
 					}
@@ -320,6 +314,8 @@
 				
 			 	<div id="contentContainer">
 
+			 		<h2> Category " Programming "</h2>
+
 			 		<div id="content">
 			 			<h2> [Tuts] Perintah Mysql untuk pemula </h2>
 			 			<p>
@@ -331,34 +327,9 @@
 							<br />
 		 					MySQL adalah sebuah perangkat lunak sistem manajemen basis data SQL (bahasa Inggris: database management system) atau DBMS yang multithread, multi-user, dengan sekitar 6 juta instalasi di seluruh dunia. MySQL AB membuat MySQL tersedia sebagai perangkat lunak gratis dibawah lisensi GNU ...
 			 			</p>
-						<a href="programming/[tuts]-mysql-untuk-pemula.html"> Read More </a>
-						<div id="kolomtanggal">
-			 				Posted on <?php
-			 								echo date("l, d-m-Y") . "<br />";
-			 						?>
-
-			 			</div>
+						<a href="#"> Read More </a>
 			 		</div>
 
-			 		<div id="content">
-			 			<h2> Hello world ! </h2>
-			 			<p>
-			 				Assalamulaikum wr wb.
-
-			 				Akhirnya, setelah 2 hari coding dan coding sempat juga mengupload template ke hosting ini.
-			 				<br />
-			 				yaa walaupun hostingan nya gratis hehe :D
-			 				<br />
-			 				oh iya saya baru bergelut di dunia web...
-			 			</p>
-			 			<a href="content/hello-world.html"> Read More </a>
-			 			<div id="kolomtanggal">
-			 				Posted on <?php
-			 								echo date("l, d-m-Y") . "<br />";
-			 						?>
-
-			 			</div>
-			 		</div>
 						<div id="rsideL">
 							<legend> List Postingan </legend>
 								<p>
@@ -370,18 +341,18 @@
 								<p>
 									<embed src="http://www.clocktag.com/cs/dt151.swf"  width="140" height="110"  wmode="transparent" type="application/x-shockwave-flash"></embed>
 								</p>
-							</div>
+						</div>
 
 						<div id="rsideP">
 							<legend> Web Visitors </legend>
 								<h3> Total pengunjung </h3>
 								<p>
-										<span id="wts622617">&nbsp;</span><script async type="text/javascript" 
+									<span id="wts622617">&nbsp;</span><script async type="text/javascript" 
 										src="//server3.web-stat.com/2/622617/log6_2.js">
 										</script><noscript><a href="http://www.web-stat.net">
 										<img src="//server3.web-stat.com/6/2/622617.gif" 
 										style="border:0px;" alt=""></a></noscript>
-								</p>
+							</p>
 					</div>
 				</div>
 

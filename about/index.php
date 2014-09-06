@@ -3,9 +3,7 @@
 		<head>
 			<title> tisubasah | learn from basic and become expert.</title>
 				<link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
-				<link href='favicon.ico' rel='shorcut icon'>
 				<style type="text/css">
-				
 				body
 					{
 						background: #efefef;
@@ -14,11 +12,18 @@
 						padding: 0px;
 						font-family: 'Josefin Sans', sans-serif;
 					}
+					
+				table
+					{
+						font-family: arial;
+					}
+
 				#container
 					{
 						margin: 0;
 						padding: 0;
 					}
+				
 				#header
 					{
 						background-color: #737495;
@@ -83,25 +88,17 @@
 						padding: 0;
 					}
 
-				#kolomContainer
-					{
-						font-size: 12px;
-					}
-
-				#kolomtanggal
-					{
-						text-align: right;
-						font-size: 12px;
-					}
-
 				#content
 					{
-						color: #666666;
+						color: #000000;
+						line-height: 170% !important;
+						font-size: 100%;
+						font: inherit;
 						margin-top: 40px;
 						margin-left: 20px;
 						margin-bottom: 10px;
 						margin-right: 20px;
-						width: 416px;
+						width: 670px;
 						padding-top: 15px;
 						padding-right: 20px;
 						padding-left: 20px;
@@ -114,53 +111,19 @@
 				#content h2
 					{
 						margin-top: 10px;
-						margin-bottom: 20px;
+						margin-bottom: 17px;
 						padding: 0;
 
 					}
 
 				#content p
 					{
-						line-height: 170%;
 						padding-top: 0;
 						padding-right: 0;
 						padding-left: 0;
-						line-height: 20px;
-						font-size: 14px;
+						font-size: 100%;
 					}
 
-				#content a
-					{
-						font-family: Arial, Helvetica, sans-serif;
-						color: #666666;
-						text-decoration: none;
-						padding-top: 6px;
-						padding-right: 10px;
-						padding-bottom: 6px;
-						padding-left: 10px;
-						border-radius: 3px;
-						width: 60px;
-						margin-top: 20px;
-						display: block;
-						font-size: 12px;
-						border: 1px solid #d5d5d5;
-						background-color: #fafafa;
-					}
-
-				#content a:hover
-					{
-						background: #dfdfdf;
-					}
-
-				#content:hover
-					{
-						background-color: #f7f7f7;
-					}
-
-				#rsideContainer
-					{
-						margin-bottom: 100px;
-					}
 
 				#rsideL
 					{
@@ -278,7 +241,7 @@
 						background-color: black;
 						color: #ffffff;
 						width: 100%;
-						margin-top: 400px;
+						margin-top: 500px;
 						padding: 20px;
 						height: 200px;
 					}
@@ -295,7 +258,7 @@
 					{
 						text-align: center;
 					}
-				</style>
+			</style>
 		</head>
 		<body>
 			<?php
@@ -321,44 +284,24 @@
 			 	<div id="contentContainer">
 
 			 		<div id="content">
-			 			<h2> [Tuts] Perintah Mysql untuk pemula </h2>
-			 			<p>
-			 				
-				 			Pernah denger mysql ?
-				 			<br />
-							<br />
-		 					kalo belum nih baca penjelasannya dulu dari wikipedia :
-							<br />
-		 					MySQL adalah sebuah perangkat lunak sistem manajemen basis data SQL (bahasa Inggris: database management system) atau DBMS yang multithread, multi-user, dengan sekitar 6 juta instalasi di seluruh dunia. MySQL AB membuat MySQL tersedia sebagai perangkat lunak gratis dibawah lisensi GNU ...
-			 			</p>
-						<a href="programming/[tuts]-mysql-untuk-pemula.html"> Read More </a>
-						<div id="kolomtanggal">
-			 				Posted on <?php
-			 								echo date("l, d-m-Y") . "<br />";
-			 						?>
-
-			 			</div>
+			 			<h2> Web Pribadi seorang programmer ingusan </h2>
+			 				<p>
+			 					nama saya <i>Catur</i>, tinggal di kota tangerang selatan dan masih jones
+			 					<br />
+			 					saya senang mencari sebuah kesalahan dan memperbaikinya, kebiasan yang aneh.
+			 					<br />
+			 					juga saya menyukai cara belajar yang start nya dari dasar, kalo bisa sampai ke dasar dasar nya
+			 					<br />
+			 					karena jika dengan cara seperti itu bisa memudahkan kita untuk bisa menangkap apa yang kita pelajari kelak
+			 					<br />
+			 					<br />
+			 					<br />
+			 					udah ah saya bukan orang yang pandai merangkai kata seperti seorang puitis atau apalah itu
+			 					<br />
+			 					<br />
+			 				</p>
 			 		</div>
 
-			 		<div id="content">
-			 			<h2> Hello world ! </h2>
-			 			<p>
-			 				Assalamulaikum wr wb.
-
-			 				Akhirnya, setelah 2 hari coding dan coding sempat juga mengupload template ke hosting ini.
-			 				<br />
-			 				yaa walaupun hostingan nya gratis hehe :D
-			 				<br />
-			 				oh iya saya baru bergelut di dunia web...
-			 			</p>
-			 			<a href="content/hello-world.html"> Read More </a>
-			 			<div id="kolomtanggal">
-			 				Posted on <?php
-			 								echo date("l, d-m-Y") . "<br />";
-			 						?>
-
-			 			</div>
-			 		</div>
 						<div id="rsideL">
 							<legend> List Postingan </legend>
 								<p>
@@ -370,18 +313,18 @@
 								<p>
 									<embed src="http://www.clocktag.com/cs/dt151.swf"  width="140" height="110"  wmode="transparent" type="application/x-shockwave-flash"></embed>
 								</p>
-							</div>
+						</div>
 
 						<div id="rsideP">
 							<legend> Web Visitors </legend>
 								<h3> Total pengunjung </h3>
 								<p>
-										<span id="wts622617">&nbsp;</span><script async type="text/javascript" 
+									<span id="wts622617">&nbsp;</span><script async type="text/javascript" 
 										src="//server3.web-stat.com/2/622617/log6_2.js">
 										</script><noscript><a href="http://www.web-stat.net">
 										<img src="//server3.web-stat.com/6/2/622617.gif" 
 										style="border:0px;" alt=""></a></noscript>
-								</p>
+							</p>
 					</div>
 				</div>
 
